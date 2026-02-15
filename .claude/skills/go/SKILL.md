@@ -17,7 +17,7 @@ Execute these steps in order:
    git diff --cached --quiet || git commit -m "spec: $(git diff --cached --stat | head -1 | sed 's/^ *//')" --no-verify
    ```
 
-3. **Switch mode**: Write `IMPL_MODE` to `.vibecontrol-mode`
+3. **Switch mode**: Run `echo IMPL_MODE > .vibecontrol-mode` (must use Bash, not Write tool)
 
 4. **Read the spec**: Read all files in `spec/` to understand what to implement.
 

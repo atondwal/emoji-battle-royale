@@ -31,7 +31,7 @@ esac
 
 if [ "$MODE" = "SPEC_MODE" ] && [ "$IS_SPEC" = "false" ]; then
   case "$FILE_PATH" in
-    */.vibecontrol-mode|*/CLAUDE.md) exit 0 ;;
+    */CLAUDE.md) exit 0 ;;
   esac
   echo "SPEC_MODE: Cannot write outside spec/. Use /go to switch to IMPL_MODE." >&2
   exit 2
