@@ -17,6 +17,7 @@ IMPL_MODE:
   Claude implements spec (can't touch spec/)
   User gives task prompts → prompt written to TASK.md, committed as "task: ..."
   Claude fixes/tweaks → auto-committed as "impl: ..."
+  /og → commit impl, flip back to SPEC_MODE to work on spec
 ```
 
 ## Hooks
@@ -29,7 +30,7 @@ IMPL_MODE:
 
 ### PreToolUse → `.claude/hooks/enforce-paths.sh`
 - Fires on Write, Edit, NotebookEdit
-- In SPEC_MODE: blocks writes outside `spec/` (except `.vibecontrol-mode`)
+- In SPEC_MODE: blocks writes outside `spec/` (except `CLAUDE.md`)
 - In IMPL_MODE: blocks writes inside `spec/`
 - Reads are never blocked
 
@@ -48,6 +49,9 @@ IMPL_MODE:
 
 ### /go
 Commits the spec, flips mode to IMPL_MODE, reads the spec diff, and begins implementation.
+
+### /og
+Commits implementation, flips mode back to SPEC_MODE to work on the spec.
 
 ### /vc-status
 Shows current mode, spec files, git status, and recent commits.

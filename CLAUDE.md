@@ -11,7 +11,7 @@ Hooks enforce this automatically — you don't need to worry about it, just foll
 
 Commits are auto-generated with `spec:` / `impl:` / `task:` prefixes.
 
-Use `/go` when the spec is ready. Use `/vc-status` to check where things stand.
+Use `/go` when the spec is ready. Use `/og` to go back and work on the spec. Use `/vc-status` to check where things stand.
 
 ## About this file
 
